@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK Commerce US</title>
 
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
 
+    <!-- flipbox -->
     <link rel="stylesheet" href="flipbox.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
     <div class="site-wrapper">
@@ -17,16 +28,18 @@
             <picture>
                 <source media="(max-width: 480px)" srcset="bg-mobile.jpg" />
                 <source media="(max-width: 768px)" srcset="bg-tablet.jpg" />
-                <source media="(min-width: 769px)" srcset="bg-desktop.jpg" />
-                <img src="bg-desktop.jpg" alt="">
+                <source media="(max-width: 1920px)" srcset="bg-desktop.jpg" />
+                <source media="(min-width: 1921px)" srcset="bg-widescreen.jpg" />
+                <img src="bg-widescreen.jpg" alt="">
             </picture>
         </div>
         <div class="overlay">
             <picture>
                 <source media="(max-width: 480px)" srcset="bg-overlay-mobile.jpg" />
                 <source media="(max-width: 768px)" srcset="bg-overlay-tablet.jpg" />
-                <source media="(min-width: 769px)" srcset="bg-overlay-desktop.jpg" />
-                <img src="bg-overlay-desktop.jpg" alt="">
+                <source media="(max-width: 1920px)" srcset="bg-overlay-desktop.jpg" />
+                <source media="(min-width: 1921px)" srcset="bg-overlay-widescreen.jpg" />
+                <img src="bg-overlay-widescreen.jpg" alt="">
             </picture>
         </div>
         <div class="text">
@@ -83,7 +96,8 @@
             position: relative;
             display: flex;
             overflow: hidden;
-            max-width: 1920px;
+            /* max-width: 1920px; */
+            max-width: 2560px;
             margin: auto;
         }
         .bg {
@@ -148,7 +162,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 384px 40px 40px;
+            padding-top: 22vw;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 40px;
             color: #fff;
             text-align: center;
         }
@@ -196,7 +213,7 @@
             color: inherit;
         }
 
-        @media (min-width: 1441px) {
+        @media (max-width: 1920px) {
             .text {
                 padding-top: 26.66666666666667vw;
             }
@@ -205,6 +222,9 @@
             .bg img,
             .overlay img {
                 background-size: contain;
+            }
+            .text {
+                padding-top: 384px;
             }
         }
         @media (max-width: 768px) {
